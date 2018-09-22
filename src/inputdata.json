@@ -1,0 +1,21 @@
+{
+    "completed_at": "",
+    "completed_exercises":[
+      {
+        "completed_at": 0,
+        "workout_exercise_id": 0,
+        "completed_msec":8950,
+        "rest_completed_msec":0,
+        "hr_data":
+          [
+            {"exercise_position":919,"timestamp":1503947145,"value":147},
+            {"exercise_position":1914,"timestamp":1503947146,"value":113},
+            {"exercise_position":2914,"timestamp":1503947147,"value":171},
+            {"exercise_position":3914,"timestamp":1503947148,"value":158},
+            {"exercise_position":4918,"timestamp":1503947149,"value":75},
+            {"exercise_position":5912,"timestamp":1503947150,"value":78},
+            {"exercise_position":6920,"timestamp":1503947151,"value":78}
+          ]
+      }
+    ]
+}

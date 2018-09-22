@@ -47,8 +47,12 @@ describe('Mirror API', function() {
             });
         });
 
-        it('should fail after too many login attempts', function() {
-            //TODO: write last
+        it('should fail after too many login attempts', async function() {
+            while(true) {
+                var response = await utils.authLogin(process.env.MIRROR_EMAIL, "foo");
+                if(response.response.statusCode === 403)
+                    return expect(response).to.have.status(403);
+            }
         })
     });
 

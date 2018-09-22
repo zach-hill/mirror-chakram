@@ -2,6 +2,8 @@ require('dotenv').config();
 var chakram = require('chakram'), 
 expect = chakram.expect,
 assert = chakram.assert;
+
+
 const utils = require('../utils');
 const INPUT_DATA = require('../inputdata.json');
 const WORKOUT_ID = 'h6TJfbTeTJa3Unxkpp4K9g';
@@ -106,9 +108,6 @@ describe('Mirror API', function() {
                     expect(response).to.have.status(401);
                 });
             })
-        });
-
-        
+        }); 
     });
-    
 });

@@ -51,7 +51,7 @@ describe('Mirror API', function() {
 
         //This one works too good and now I'm banned and EVERYTHING FAILS
 
-        /*
+        
         it('should fail after too many login attempts', async function() {
             while(true) {
                 var response = await utils.authLogin(process.env.MIRROR_EMAIL, "foo");
@@ -59,7 +59,7 @@ describe('Mirror API', function() {
                     return expect(response).to.have.status(403);
             }
         })
-        */
+        
     });
 
     describe('Workout endpoint tests', function() {

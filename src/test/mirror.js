@@ -93,7 +93,7 @@ describe('Mirror API', function() {
                 });
             })
 
-            it('PUT should be not allowed', function() {
+            it('should not accept PUT method', function() {
                 return chakram.put(BASE_URL + "v1/workout/" + WORKOUT_ID).then(function(response) {
                     expect(response).to.have.status(405);
                 });

@@ -9,7 +9,8 @@
   "license": "MIT",
   "devDependencies": {
     "chakram": "^1.5.0",
-    "dotenv": "^6.0.0"
+    "dotenv": "^6.0.0",
+    "puppeteer": "^1.8.0"
   },
   "dependencies": {
     "mocha": "^5.2.0"

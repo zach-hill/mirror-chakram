@@ -3,7 +3,7 @@ var chakram = require('chakram'),
 expect = chakram.expect,
 assert = chakram.assert;
 
-
+const crawler = require('../crawler')
 const utils = require('../utils');
 const INPUT_DATA = require('../inputdata.json');
 const WORKOUT_ID = 'h6TJfbTeTJa3Unxkpp4K9g';
@@ -18,7 +18,8 @@ describe('Mirror API', function() {
 
     var userToken;
     before(async function() {
-        return utils.authLogin(process.env.MIRROR_EMAIL, process.env.MIRROR_PASSWORD)
+        return Promise.all([crawler.loginToAdmin(),
+        utils.authLogin(process.env.MIRROR_EMAIL, process.env.MIRROR_PASSWORD)
         .then(function(response) {
             if(response.response.statusCode === 200) {
                 userToken = "user_token=" + response.body.data.user_token;
@@ -28,8 +29,12 @@ describe('Mirror API', function() {
                     }
                 })
             }
-        });
+        })])
     });
+
+    after(async function() {
+        return await crawler.resetLockout();
+    })
 
     describe('Auth endpoint tests', function() {
 
